@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#004687">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>2026 FIFA World Cup™ | 2026年世界杯</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --fifa-blue: #004687;
+  --fifa-dark: #001a38;
+  --fifa-navy: #002b5c;
+  --fifa-gold: #c8a96e;
+  --fifa-gold-light: #e8d5a3;
+  --fifa-white: #ffffff;
+  --fifa-gray: #f4f5f7;
+  --fifa-gray2: #e8eaed;
+  --fifa-text: #1a1a2e;
+  --fifa-text2: #5a6377;
+  --fifa-green: #00a651;
+  --fifa-red: #d4213d;
+  --fifa-live: #ff1744;
+  --fifa-border: #d0d5dd;
+  --fifa-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --fifa-shadow-lg: 0 4px 24px rgba(0,0,0,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--fifa-gray); color: var(--fifa-text); font-family: 'Inter', -apple-system, 'Noto Sans SC', sans-serif; line-height: 1.5; -webkit-tap-highlight-color: transparent; padding-bottom: env(safe-area-inset-bottom, 0); }
+a { color: var(--fifa-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === FIFA Header === */
+.header { background: linear-gradient(135deg, var(--fifa-dark) 0%, var(--fifa-blue) 60%, var(--fifa-navy) 100%); position: relative; overflow: hidden; }
+.header::before { content: ''; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(ellipse at 80% 50%, rgba(200,169,110,0.12) 0%, transparent 60%); pointer-events: none; }
+.header-top { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.header-logo { display: flex; align-items: center; gap: 0.8rem; }
+.header-logo .fifa-text { font-size: 1.4rem; font-weight: 900; color: var(--fifa-white); letter-spacing: 4px; }
+.header-logo .wc-badge { background: var(--fifa-gold); color: var(--fifa-dark); padding: 0.15rem 0.6rem; border-radius: 3px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; }
+.header-right { color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+.header-main { padding: 2.5rem 2rem 2rem; text-align: center; position: relative; }
+.header-main h1 { font-size: 2.8rem; font-weight: 900; color: var(--fifa-white); letter-spacing: 1px; line-height: 1.2; }
+.header-main h1 .gold { color: var(--fifa-gold); }
+.header-main .tagline { color: rgba(255,255,255,0.7); margin-top: 0.5rem; font-size: 1rem; letter-spacing: 3px; text-transform: uppercase; }
+.header-main .hosts { color: var(--fifa-gold-light); margin-top: 0.3rem; font-size: 0.9rem; }
+.header-main .update-info { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-top: 0.8rem; }
+
+/* === FIFA Nav === */
+.nav { background: var(--fifa-white); border-bottom: 2px solid var(--fifa-gold); position: sticky; top: 0; z-index: 100; box-shadow: var(--fifa-shadow); }
+.nav-inner { display: flex; justify-content: center; max-width: 1200px; margin: 0 auto; }
+.nav button { background: none; border: none; color: var(--fifa-text2); padding: 0.9rem 1.6rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; border-bottom: 3px solid transparent; letter-spacing: 0.5px; }
+.nav button:hover { color: var(--fifa-blue); background: rgba(0,70,135,0.03); }
+.nav button.active { color: var(--fifa-blue); border-bottom-color: var(--fifa-gold); }
+
+/* === Container === */
+.container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* === Stats Bar (FIFA style) === */
+.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.stat-card { background: var(--fifa-white); border-radius: 8px; padding: 1rem; text-align: center; box-shadow: var(--fifa-shadow); border-top: 3px solid var(--fifa-blue); }
+.stat-card.gold { border-top-color: var(--fifa-gold); }
+.stat-card.green { border-top-color: var(--fifa-green); }
+.stat-card .stat-val { font-size: 2rem; font-weight: 800; color: var(--fifa-blue); }
+.stat-card.gold .stat-val { color: var(--fifa-gold); }
+.stat-card.green .stat-val { color: var(--fifa-green); }
+.stat-card .stat-label { font-size: 0.75rem; color: var(--fifa-text2); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
+
+/* === Live Badge === */
+.live-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: var(--fifa-live); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; animation: livePulse 2s infinite; }
+.live-badge::before { content: ''; width: 5px; height: 5px; background: white; border-radius: 50%; }
+@keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+/* === Match Card (FIFA style) === */
+.match-card { background: var(--fifa-white); border-radius: 8px; margin-bottom: 0.6rem; box-shadow: var(--fifa-shadow); overflow: hidden; transition: box-shadow 0.2s; }
+.match-card:hover { box-shadow: var(--fifa-shadow-lg); }
+.match-card.live { border-left: 4px solid var(--fifa-live); }
+.match-card.completed { border-left: 4px solid var(--fifa-green); }
+.match-card.upcoming { border-left: 4px solid var(--fifa-blue); }
+
+.match-top { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; background: var(--fifa-gray); font-size: 0.75rem; color: var(--fifa-text2); }
+.match-group-tag { background: var(--fifa-blue); color: white; padding: 0.1rem 0.5rem; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; }
+.match-group-tag.cross { background: var(--fifa-navy); }
+.match-group-tag.ko { background: var(--fifa-gold); color: var(--fifa-dark); }
+
+.match-body { display: flex; align-items: center; padding: 0.8rem 1rem; }
+.team { flex: 1; display: flex; align-items: center; gap: 0.6rem; }
+.team.away { flex-direction: row-reverse; text-align: right; }
+.team-logo { width: 32px; height: 32px; border-radius: 50%; object-fit: contain; }
+.team-info .team-name { font-weight: 700; font-size: 0.95rem; color: var(--fifa-text); }
+.team-info .team-name-cn { font-size: 0.7rem; color: var(--fifa-text2); }
+
+.score-center { min-width: 80px; text-align: center; }
+.score-center .scores { font-size: 1.5rem; font-weight: 800; color: var(--fifa-text); letter-spacing: 3px; }
+.score-center .vs-text { font-size: 0.85rem; color: var(--fifa-text2); font-weight: 600; letter-spacing: 2px; }
+.score-center .ft-tag { font-size: 0.6rem; color: var(--fifa-green); font-weight: 700; letter-spacing: 1px; }
+
+.match-goals { padding: 0.4rem 1rem; border-top: 1px solid var(--fifa-gray2); font-size: 0.75rem; color: var(--fifa-text2); }
+.goal-item { padding: 0.05rem 0; }
+.goal-item .time { color: var(--fifa-blue); font-weight: 600; }
+.goal-item .pen { color: var(--fifa-gold); font-weight: 600; }
+.goal-item .own { color: var(--fifa-red); font-weight: 600; }
+
+/* === Group Table (FIFA style) === */
+.group-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1rem; }
+.group-card { background: var(--fifa-white); border-radius: 8px; box-shadow: var(--fifa-shadow); overflow: hidden; }
+.group-header { background: var(--fifa-blue); color: white; padding: 0.6rem 1rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem; }
+.group-header .trophy { font-size: 1rem; }
+.group-table { width: 100%; border-collapse: collapse; }
+.group-table th { padding: 0.4rem 0.5rem; text-align: center; font-size: 0.65rem; color: var(--fifa-text2); border-bottom: 1px solid var(--fifa-gray2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.group-table th:first-child { text-align: left; }
+.group-table td { padding: 0.45rem 0.5rem; text-align: center; font-size: 0.8rem; border-bottom: 1px solid rgba(0,0,0,0.03); }
+.group-table td:first-child { text-align: left; font-weight: 600; }
+.group-table tr:hover { background: rgba(0,70,135,0.03); }
+.group-table .qualify-1, .group-table .qualify-2 { background: rgba(0,166,81,0.06); }
+.group-table .pts-cell { font-weight: 800; color: var(--fifa-blue); }
+
+/* === Prediction === */
+.pred-summary { background: var(--fifa-white); border-radius: 8px; padding: 1.2rem; box-shadow: var(--fifa-shadow); margin-bottom: 1rem; }
+.pred-summary h3 { color: var(--fifa-blue); font-size: 1rem; margin-bottom: 0.8rem; }
+.pred-stats { display: flex; gap: 2rem; justify-content: center; }
+.pred-stat { text-align: center; }
+.pred-stat .val { font-size: 1.6rem; font-weight: 800; }
+.pred-stat .label { font-size: 0.7rem; color: var(--fifa-text2); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.pred-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700; }
+.pred-correct { background: rgba(0,166,81,0.1); color: var(--fifa-green); }
+.pred-wrong { background: rgba(212,33,61,0.1); color: var(--fifa-red); }
+.pred-partial { background: rgba(200,169,110,0.15); color: #8a6d2b; }
+
+.pred-section-title { padding: 0.6rem 0; margin: 1rem 0 0.5rem; border-bottom: 2px solid var(--fifa-gold); font-size: 0.95rem; font-weight: 700; color: var(--fifa-blue); display: flex; align-items: center; gap: 0.5rem; }
+
+/* === News === */
+.news-card { background: var(--fifa-white); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 0.6rem; box-shadow: var(--fifa-shadow); transition: box-shadow 0.2s; border-left: 3px solid var(--fifa-blue); }
+.news-card:hover { box-shadow: var(--fifa-shadow-lg); }
+.news-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--fifa-text); margin-bottom: 0.3rem; line-height: 1.4; }
+.news-card h3 a { color: var(--fifa-blue); }
+.news-card .news-meta { font-size: 0.75rem; color: var(--fifa-text2); margin-bottom: 0.4rem; }
+.news-card .news-summary { font-size: 0.85rem; color: var(--fifa-text2); line-height: 1.5; }
+
+/* === Team card === */
+.team-card { background: var(--fifa-white); border-radius: 8px; padding: 1rem; text-align: center; box-shadow: var(--fifa-shadow); transition: transform 0.15s, box-shadow 0.15s; }
+.team-card:hover { transform: translateY(-2px); box-shadow: var(--fifa-shadow-lg); }
+.team-card .team-logo-lg { width: 52px; height: 52px; border-radius: 50%; object-fit: contain; margin-bottom: 0.5rem; }
+.team-card .team-name-lg { font-weight: 700; font-size: 0.9rem; }
+.team-card .team-name-cn { font-size: 0.75rem; color: var(--fifa-text2); }
+.team-card .team-group { margin-top: 0.3rem; font-size: 0.7rem; color: var(--fifa-blue); font-weight: 600; }
+
+/* === Filter === */
+.filter-bar { display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+.filter-bar label { font-size: 0.8rem; color: var(--fifa-text2); margin-right: 0.3rem; font-weight: 600; }
+.filter-btn { background: var(--fifa-white); border: 1px solid var(--fifa-border); color: var(--fifa-text2); padding: 0.3rem 0.7rem; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 600; transition: all 0.15s; }
+.filter-btn:hover { border-color: var(--fifa-blue); color: var(--fifa-blue); }
+.filter-btn.active { background: var(--fifa-blue); border-color: var(--fifa-blue); color: white; }
+
+/* === Day separator === */
+.day-sep { padding: 0.4rem 0; margin: 0.8rem 0 0.4rem; border-bottom: 2px solid var(--fifa-gold); font-size: 0.85rem; color: var(--fifa-blue); font-weight: 700; letter-spacing: 0.5px; }
+
+/* === Footer === */
+.footer { background: var(--fifa-dark); color: rgba(255,255,255,0.5); text-align: center; padding: 1.5rem; font-size: 0.75rem; margin-top: 2rem; }
+.footer .fifa-mark { color: var(--fifa-gold); font-weight: 700; letter-spacing: 2px; }
+
+/* === Loading === */
+.loading { text-align: center; padding: 3rem; color: var(--fifa-text2); }
+.loading .spinner { width: 36px; height: 36px; border: 3px solid var(--fifa-gray2); border-top-color: var(--fifa-blue); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty { text-align: center; padding: 2rem; color: var(--fifa-text2); }
+
+/* === Responsive === */
+@media (max-width: 640px) {
+  /* Header */
+  .header-top { padding: 0.5rem 0.8rem; flex-wrap: wrap; gap: 0.3rem; }
+  .header-logo .fifa-text { font-size: 1.1rem; letter-spacing: 2px; }
+  .header-logo .wc-badge { font-size: 0.6rem; padding: 0.1rem 0.4rem; }
+  .header-right { font-size: 0.65rem; width: 100%; text-align: center; }
+  .header-main { padding: 1.2rem 0.8rem 1rem; }
+  .header-main h1 { font-size: 1.5rem; }
+  .header-main .tagline { font-size: 0.75rem; letter-spacing: 1px; }
+  .header-main .hosts { font-size: 0.75rem; }
+  .header-main .update-info { font-size: 0.6rem; }
+
+  /* Nav - scrollable */
+  .nav-inner { overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav button { padding: 0.65rem 0.9rem; font-size: 0.8rem; white-space: nowrap; flex-shrink: 0; }
+
+  /* Container */
+  .container { padding: 0.8rem 0.6rem; }
+
+  /* Stats */
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .stat-card { padding: 0.6rem; }
+  .stat-card .stat-val { font-size: 1.3rem; }
+  .stat-card .stat-label { font-size: 0.6rem; }
+
+  /* Match Card */
+  .match-card { margin-bottom: 0.5rem; }
+  .match-top { padding: 0.35rem 0.7rem; font-size: 0.65rem; flex-wrap: wrap; gap: 0.2rem; }
+  .match-top > div:nth-child(3) { display: none; } /* Hide venue on mobile */
+  .match-group-tag { font-size: 0.55rem; padding: 0.05rem 0.35rem; }
+  .match-body { padding: 0.5rem 0.7rem; }
+  .team-logo { width: 24px; height: 24px; }
+  .team-info .team-name { font-size: 0.8rem; }
+  .team-info .team-name-cn { font-size: 0.6rem; }
+  .score-center { min-width: 60px; }
+  .score-center .scores { font-size: 1.1rem; }
+  .score-center .vs-text { font-size: 0.75rem; }
+  .match-goals { padding: 0.3rem 0.7rem; font-size: 0.65rem; }
+
+  /* Group Grid */
+  .group-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+  .group-header { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+  .group-table td, .group-table th { padding: 0.3rem 0.3rem; font-size: 0.7rem; }
+  .group-table td:first-child { max-width: 70px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .group-table .hide-mobile { display: none; }
+
+  /* Team cards */
+  .team-card { padding: 0.6rem; }
+  .team-card .team-logo-lg { width: 40px; height: 40px; }
+  .team-card .team-name-lg { font-size: 0.75rem; }
+  .team-card .team-name-cn { font-size: 0.65rem; }
+
+  /* Predictions */
+  .pred-summary { padding: 0.8rem; }
+  .pred-stats { gap: 1rem; }
+  .pred-stat .val { font-size: 1.2rem; }
+  .pred-section-title { font-size: 0.8rem; }
+  .match-goals[style*="flex"] { flex-direction: column; gap: 0.2rem; font-size: 0.65rem; }
+
+  /* News */
+  .news-card { padding: 0.7rem 0.8rem; }
+  .news-card h3 { font-size: 0.85rem; }
+  .news-card .news-summary { font-size: 0.75rem; }
+
+  /* Filter */
+  .filter-bar { gap: 0.3rem; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 4px; }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn { padding: 0.25rem 0.5rem; font-size: 0.7rem; flex-shrink: 0; }
+
+  /* Day separator */
+  .day-sep { font-size: 0.8rem; padding: 0.3rem 0; }
+
+  /* Touch feedback */
+  .match-card:active { background: rgba(0,70,135,0.03); }
+  .nav button:active { background: rgba(0,70,135,0.08); }
+  .filter-btn:active { opacity: 0.7; }
+  .news-card:active { background: var(--fifa-gray); }
+
+  /* Bottom nav area padding for iPhone */
+  .footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0)); }
+
+  /* Reduce motion for preference */
+  .live-badge { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="header-logo">
+      <span class="fifa-text">FIFA</span>
+      <span class="wc-badge">WORLD CUP 2026™</span>
+    </div>
+    <div class="header-right" id="updateTime"></div>
+  </div>
+  <div class="header-main">
+    <h1>2026 <span class="gold">FIFA World Cup</span></h1>
+    <div class="tagline">United by Emotion</div>
+    <div class="hosts">🇺🇸 United States · 🇨🇦 Canada · 🇲🇽 Mexico</div>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="nav-inner">
+    <button class="active" onclick="switchTab('results')">赛果</button>
+    <button onclick="switchTab('schedule')">赛程</button>
+    <button onclick="switchTab('groups')">分组</button>
+    <button onclick="switchTab('teams')">队伍</button>
+    <button onclick="switchTab('predictions')">预测</button>
+    <button onclick="switchTab('news')">新闻</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-card green"><div class="stat-val" id="statCompleted">-</div><div class="stat-label">已完赛</div></div>
+    <div class="stat-card gold"><div class="stat-val" id="statGoals">-</div><div class="stat-label">总进球</div></div>
+    <div class="stat-card"><div class="stat-val" id="statUpcoming">-</div><div class="stat-label">待比赛</div></div>
+    <div class="stat-card"><div class="stat-val" id="statTeams">48</div><div class="stat-label">参赛队</div></div>
+  </div>
+
+  <div class="tab-content active" id="tab-results">
+    <div class="filter-bar">
+      <label>筛选</label>
+      <button class="filter-btn active" onclick="filterResults('all')">全部</button>
+      <button class="filter-btn" onclick="filterResults('live')">🔴 进行中</button>
+      <button class="filter-btn" onclick="filterResults('completed')">已完赛</button>
+      <button class="filter-btn" onclick="filterResults('upcoming')">未开赛</button>
+    </div>
+    <div id="resultsList"><div class="loading"><div class="spinner"></div>加载中...</div></div>
+  </div>
+
+  <div class="tab-content" id="tab-schedule">
+    <div class="filter-bar">
+      <label>分组</label>
+      <button class="filter-btn active" onclick="filterSchedule('all')">全部</button>
+      <button class="filter-btn" onclick="filterSchedule('A')">A</button>
+      <button class="filter-btn" onclick="filterSchedule('B')">B</button>
+      <button class="filter-btn" onclick="filterSchedule('C')">C</button>
+      <button class="filter-btn" onclick="filterSchedule('D')">D</button>
+      <button class="filter-btn" onclick="filterSchedule('E')">E</button>
+      <button class="filter-btn" onclick="filterSchedule('F')">F</button>
+      <button class="filter-btn" onclick="filterSchedule('G')">G</button>
+      <button class="filter-btn" onclick="filterSchedule('H')">H</button>
+      <button class="filter-btn" onclick="filterSchedule('I')">I</button>
+      <button class="filter-btn" onclick="filterSchedule('J')">J</button>
+      <button class="filter-btn" onclick="filterSchedule('K')">K</button>
+      <button class="filter-btn" onclick="filterSchedule('L')">L</button>
+      <button class="filter-btn" onclick="filterSchedule('cross')">交叉赛</button>
+      <button class="filter-btn" onclick="filterSchedule('ko')">淘汰赛</button>
+    </div>
+    <div id="scheduleList"><div class="loading"><div class="spinner"></div>加载中...</div></div>
+  </div>
+
+  <div class="tab-content" id="tab-groups"><div id="groupsList"><div class="loading"><div class="spinner"></div>加载中...</div></div></div>
+  <div class="tab-content" id="tab-teams"><div id="teamsList"><div class="loading"><div class="spinner"></div>加载中...</div></div></div>
+  <div class="tab-content" id="tab-predictions"><div id="predictionsList"><div class="loading"><div class="spinner"></div>加载中...</div></div></div>
+  <div class="tab-content" id="tab-news"><div id="newsList"><div class="loading"><div class="spinner"></div>加载中...</div></div></div>
+</div>
+
+<div class="footer">
+  <span class="fifa-mark">FIFA</span> WORLD CUP 2026™ · 数据来源：ESPN API · 每小时自动更新
+</div>
+
+<script>
+let WC_DATA = null;
+let currentResultFilter = 'all';
+let currentScheduleFilter = 'all';
+
+const TEAM_CN = {"USA":"美国","Canada":"加拿大","Mexico":"墨西哥","France":"法国","England":"英格兰","Germany":"德国","Spain":"西班牙","Italy":"意大利","Brazil":"巴西","Argentina":"阿根廷","Portugal":"葡萄牙","Netherlands":"荷兰","Belgium":"比利时","Croatia":"克罗地亚","Japan":"日本","South Korea":"韩国","Australia":"澳大利亚","Saudi Arabia":"沙特","Iran":"伊朗","Iraq":"伊拉克","Jordan":"约旦","Uzbekistan":"乌兹别克斯坦","Senegal":"塞内加尔","Nigeria":"尼日利亚","Cameroon":"喀麦隆","Ghana":"加纳","Morocco":"摩洛哥","Tunisia":"突尼斯","Algeria":"阿尔及利亚","Egypt":"埃及","Congo DR":"刚果(金)","Ivory Coast":"科特迪瓦","Costa Rica":"哥斯达黎加","Jamaica":"牙买加","Panama":"巴拿马","Honduras":"洪都拉斯","Colombia":"哥伦比亚","Chile":"智利","Uruguay":"乌拉圭","Ecuador":"厄瓜多尔","Paraguay":"巴拉圭","Peru":"秘鲁","Venezuela":"委内瑞拉","Bolivia":"玻利维亚","Serbia":"塞尔维亚","Switzerland":"瑞士","Denmark":"丹麦","Sweden":"瑞典","Norway":"挪威","Poland":"波兰","Ukraine":"乌克兰","Austria":"奥地利","Scotland":"苏格兰","Wales":"威尔士","Czechia":"捷克","Romania":"罗马尼亚","Turkey":"土耳其","Greece":"希腊","Republic of Ireland":"爱尔兰","Bosnia-Herz":"波黑","North Macedonia":"北马其顿","Slovakia":"斯洛伐克","Slovenia":"斯洛文尼亚","Hungary":"匈牙利","Finland":"芬兰","Iceland":"冰岛","New Zealand":"新西兰","Qatar":"卡塔尔","South Africa":"南非","Haiti":"海地","Türkiye":"土耳其","Curacao":"库拉索","Curaçao":"库拉索","Cape Verde":"佛得角","Dominican Rep.":"多米尼加"};
+
+// Team strength ranking for predictions
+const TEAM_RANK = {"Argentina":1,"France":2,"Brazil":3,"England":4,"Germany":5,"Spain":6,"Portugal":7,"Netherlands":8,"Belgium":9,"Croatia":10,"Morocco":11,"Switzerland":12,"USA":13,"Mexico":14,"Colombia":15,"Uruguay":16,"Japan":17,"South Korea":18,"Denmark":19,"Australia":20,"Sweden":21,"Norway":22,"Austria":23,"Poland":24,"Serbia":25,"Scotland":26,"Czechia":27,"Ghana":28,"Canada":29,"Ecuador":30,"Qatar":31,"Saudi Arabia":32,"Iran":33,"Egypt":34,"Nigeria":35,"Senegal":36,"Tunisia":37,"Algeria":38,"Ivory Coast":39,"Iraq":40,"Uzbekistan":41,"Jordan":42,"Paraguay":43,"Chile":44,"Panama":45,"New Zealand":46,"Congo DR":47,"Haiti":48,"Bosnia-Herz":49,"South Africa":50,"Türkiye":23,"Curaçao":60,"Curacao":60,"Cape Verde":55};
+
+function switchTab(tab) {
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch('data.json?t=' + Date.now());
+    WC_DATA = await resp.json();
+    renderAll();
+  } catch (e) {
+    console.error('Load error:', e);
+  }
+}
+
+function renderAll() {
+  if (!WC_DATA) return;
+  document.getElementById('updateTime').textContent = '更新于 ' + WC_DATA.last_updated;
+  const matches = WC_DATA.matches;
+  const completed = matches.filter(m => m.state === 'post');
+  const live = matches.filter(m => m.state === 'in');
+  const upcoming = matches.filter(m => m.state !== 'post' && m.state !== 'in');
+  const totalGoals = completed.reduce((sum, m) => sum + parseInt(m.home_score) + parseInt(m.away_score), 0);
+  document.getElementById('statCompleted').textContent = completed.length;
+  document.getElementById('statGoals').textContent = totalGoals;
+  document.getElementById('statUpcoming').textContent = upcoming.length;
+  renderResults();
+  renderSchedule();
+  renderGroups();
+  renderTeams();
+  renderPredictions();
+  renderNews();
+}
+
+function groupTagHTML(group) {
+  if (!group || group === '?') return '';
+  if (group.includes('/')) return '<span class="match-group-tag cross">' + group + ' 交叉</span>';
+  if (group === '淘汰赛') return '<span class="match-group-tag ko">🏆 ' + group + '</span>';
+  return '<span class="match-group-tag">' + group + ' 组</span>';
+}
+
+function matchCardHTML(m) {
+  const stateClass = m.state === 'post' ? 'completed' : m.state === 'in' ? 'live' : 'upcoming';
+  const liveBadge = m.state === 'in' ? '<span class="live-badge">LIVE</span>' : '';
+  const ftTag = m.state === 'post' ? '<div class="ft-tag">FT</div>' : '';
+  
+  let scoreHTML;
+  if (m.state === 'post') {
+    scoreHTML = '<div class="scores">' + m.away_score + ' - ' + m.home_score + '</div>' + ftTag;
+  } else if (m.state === 'in') {
+    scoreHTML = '<div class="scores" style="color:var(--fifa-live)">' + m.away_score + ' - ' + m.home_score + '</div>';
+  } else {
+    scoreHTML = '<div class="vs-text">VS</div>';
+  }
+  
+  let goalsHTML = '';
+  if (m.goals && m.goals.length > 0) {
+    goalsHTML = '<div class="match-goals">' + m.goals.map(g => {
+      const pen = g.penalty ? '<span class="pen">(点)</span>' : '';
+      const own = g.own ? '<span class="own">(乌龙)</span>' : '';
+      return '<div class="goal-item"><span class="time">' + g.time + "'</span> " + g.player + pen + own + '</div>';
+    }).join('') + '</div>';
+  }
+  
+  const logo = (url) => url ? '<img class="team-logo" src="' + url + '" onerror="this.style.display=\'none\'">' : '';
+  
+  return '<div class="match-card ' + stateClass + '">' +
+    '<div class="match-top"><div>' + groupTagHTML(m.group) + '</div><div>' + m.bj_date + ' ' + m.bj_time + ' ' + liveBadge + '</div><div>' + m.venue + '</div></div>' +
+    '<div class="match-body">' +
+    '<div class="team away"><div class="team-info"><div class="team-name">' + m.away + '</div><div class="team-name-cn">' + m.away_cn + '</div></div>' + logo(m.away_logo) + '</div>' +
+    '<div class="score-center">' + scoreHTML + '</div>' +
+    '<div class="team home">' + logo(m.home_logo) + '<div class="team-info"><div class="team-name">' + m.home + '</div><div class="team-name-cn">' + m.home_cn + '</div></div></div>' +
+    '</div>' + goalsHTML + '</div>';
+}
+
+function renderResults() {
+  const matches = WC_DATA.matches;
+  let filtered = matches;
+  if (currentResultFilter === 'live') filtered = matches.filter(m => m.state === 'in');
+  else if (currentResultFilter === 'completed') filtered = matches.filter(m => m.state === 'post');
+  else if (currentResultFilter === 'upcoming') filtered = matches.filter(m => m.state !== 'post' && m.state !== 'in');
+  filtered.sort((a, b) => {
+    if (a.state === 'in' && b.state !== 'in') return -1;
+    if (b.state === 'in' && a.state !== 'in') return 1;
+    if (a.state === 'post' && b.state !== 'post') return -1;
+    if (b.state === 'post' && a.state !== 'post') return 1;
+    return b.date_bj.localeCompare(a.date_bj);
+  });
+  document.getElementById('resultsList').innerHTML = filtered.length ? filtered.map(matchCardHTML).join('') : '<div class="empty">暂无数据</div>';
+}
+
+function filterResults(f) {
+  currentResultFilter = f;
+  document.querySelectorAll('#tab-results .filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderResults();
+}
+
+function renderSchedule() {
+  const matches = WC_DATA.matches;
+  let filtered;
+  if (currentScheduleFilter === 'all') filtered = matches;
+  else if (currentScheduleFilter === 'cross') filtered = matches.filter(m => m.group.includes('/'));
+  else if (currentScheduleFilter === 'ko') filtered = matches.filter(m => m.group === '淘汰赛');
+  else filtered = matches.filter(m => m.group === currentScheduleFilter || m.group.startsWith(currentScheduleFilter + '/') || m.group.endsWith('/' + currentScheduleFilter));
+  filtered.sort((a, b) => a.date_bj.localeCompare(b.date_bj));
+  let html = '', lastDate = '';
+  for (const m of filtered) {
+    const dk = m.date_bj.substring(0, 10);
+    if (dk !== lastDate) { lastDate = dk; html += '<div class="day-sep">📅 ' + m.bj_date + '</div>'; }
+    html += matchCardHTML(m);
+  }
+  document.getElementById('scheduleList').innerHTML = html || '<div class="empty">暂无赛程</div>';
+}
+
+function filterSchedule(g) {
+  currentScheduleFilter = g;
+  document.querySelectorAll('#tab-schedule .filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderSchedule();
+}
+
+function renderGroups() {
+  const groups = WC_DATA.groups, matches = WC_DATA.matches, teams = WC_DATA.teams;
+  const completed = matches.filter(m => m.state === 'post');
+  let html = '<div class="group-grid">';
+  for (const [gName, gTeams] of Object.entries(groups)) {
+    let standings = gTeams.map(tName => {
+      const team = teams[tName] || {};
+      let played=0,won=0,drawn=0,lost=0,gf=0,ga=0;
+      completed.forEach(m => {
+        const isH = m.home===tName, isA = m.away===tName;
+        if (!isH && !isA) return;
+        played++;
+        const hs=parseInt(m.home_score), as=parseInt(m.away_score);
+        if (isH) { gf+=hs; ga+=as; if(hs>as)won++;else if(hs===as)drawn++;else lost++; }
+        else { gf+=as; ga+=hs; if(as>hs)won++;else if(as===hs)drawn++;else lost++; }
+      });
+      return {name:tName, cn:TEAM_CN[tName]||tName, logo:team.logo||'', played,won,drawn,lost,gf,ga,pts:won*3+drawn,gd:gf-ga};
+    });
+    standings.sort((a,b) => b.pts-a.pts || b.gd-a.gd || b.gf-a.gf);
+    html += '<div class="group-card"><div class="group-header"><span class="trophy">🏆</span> ' + gName + ' 组</div><table class="group-table"><tr><th>队伍</th><th class="hide-mobile">赛</th><th>胜</th><th>平</th><th>负</th><th>进</th><th class="hide-mobile">失</th><th>净</th><th>分</th></tr>';
+    standings.forEach((s,i) => {
+      const rc = i<2?'qualify-1':i===2?'qualify-2':'';
+      const logoImg = s.logo ? '<img class="team-logo" src="'+s.logo+'" style="width:18px;height:18px;display:inline;vertical-align:middle;margin-right:4px" onerror="this.style.display=\'none\'">' : '';
+      html += '<tr class="'+rc+'"><td>'+logoImg+s.cn+'</td><td class="hide-mobile">'+s.played+'</td><td>'+s.won+'</td><td>'+s.drawn+'</td><td>'+s.lost+'</td><td>'+s.gf+'</td><td class="hide-mobile">'+s.ga+'</td><td>'+(s.gd>0?'+':'')+s.gd+'</td><td class="pts-cell">'+s.pts+'</td></tr>';
+    });
+    html += '</table></div>';
+  }
+  html += '</div>';
+  document.getElementById('groupsList').innerHTML = html;
+}
+
+function renderTeams() {
+  const teams = WC_DATA.teams, groups = WC_DATA.groups;
+  let html = '<div class="group-grid">';
+  for (const [gName, gTeams] of Object.entries(groups)) {
+    html += '<div style="grid-column:1/-1"><div class="day-sep">🏆 ' + gName + ' 组</div></div>';
+    for (const tName of gTeams) {
+      const team = teams[tName] || {};
+      const logo = team.logo ? '<img class="team-logo-lg" src="'+team.logo+'" onerror="this.style.display=\'none\'">' : '';
+      html += '<div class="team-card">'+logo+'<div class="team-name-lg">'+tName+'</div><div class="team-name-cn">'+(team.cn||tName)+'</div><div class="team-group">'+gName+' 组</div></div>';
+    }
+  }
+  html += '</div>';
+  document.getElementById('teamsList').innerHTML = html;
+}
+
+function predictMatch(home, away) {
+  const hR = TEAM_RANK[home] || 50;
+  const aR = TEAM_RANK[away] || 50;
+  const diff = aR - hR; // positive = home stronger
+  let predHome, predAway, confidence;
+  if (diff > 15) { predHome = 2; predAway = 0; confidence = 'high'; }
+  else if (diff > 8) { predHome = 2; predAway = 1; confidence = 'medium'; }
+  else if (diff > 3) { predHome = 1; predAway = 0; confidence = 'low'; }
+  else if (diff > -3) { predHome = 1; predAway = 1; confidence = 'low'; }
+  else if (diff > -8) { predHome = 0; predAway = 1; confidence = 'low'; }
+  else if (diff > -15) { predHome = 1; predAway = 2; confidence = 'medium'; }
+  else { predHome = 0; predAway = 2; confidence = 'high'; }
+  const winner = predHome > predAway ? 'home' : predAway > predHome ? 'away' : 'draw';
+  return { predHome, predAway, winner, confidence };
+}
+
+function renderPredictions() {
+  const completed = WC_DATA.matches.filter(m => m.state === 'post');
+  const now = new Date();
+  const tomorrowStr = (now.getMonth()+1).toString().padStart(2,'0') + '/' + now.getDate().toString().padStart(2,'0');
+  const upcoming = WC_DATA.matches.filter(m => m.state !== 'post').sort((a,b) => a.date_bj.localeCompare(b.date_bj));
+  const tomorrow = upcoming.filter(m => {
+    const d = new Date(m.date_utc.replace('Z','+00:00'));
+    const bjD = new Date(d.getTime() + 8*3600000);
+    const targetDate = new Date(now.getTime() + 86400000);
+    return bjD.getDate() === targetDate.getDate() && bjD.getMonth() === targetDate.getMonth();
+  });
+  const nextUp = tomorrow.length > 0 ? tomorrow : upcoming.slice(0, 6);
+
+  // Past predictions accuracy
+  let correct=0, partial=0, wrong=0;
+  completed.forEach(m => {
+    const pred = predictMatch(m.home, m.away);
+    const actualH = parseInt(m.home_score), actualA = parseInt(m.away_score);
+    const actualWinner = actualH > actualA ? 'home' : actualA > actualH ? 'away' : 'draw';
+    if (pred.winner === actualWinner) correct++;
+    else if (pred.winner === 'draw' || actualWinner === 'draw') partial++;
+    else wrong++;
+  });
+  const total = completed.length;
+  const accuracy = total > 0 ? Math.round(correct/total*100) : 0;
+
+  let html = '<div class="pred-summary"><h3>🔮 预测准确率统计</h3><div class="pred-stats">' +
+    '<div class="pred-stat"><div class="val" style="color:var(--fifa-green)">' + correct + '</div><div class="label">正确</div></div>' +
+    '<div class="pred-stat"><div class="val" style="color:#8a6d2b">' + partial + '</div><div class="label">部分</div></div>' +
+    '<div class="pred-stat"><div class="val" style="color:var(--fifa-red)">' + wrong + '</div><div class="label">错误</div></div>' +
+    '<div class="pred-stat"><div class="val" style="color:var(--fifa-blue)">' + accuracy + '%</div><div class="label">准确率</div></div>' +
+    '</div></div>';
+
+  // Upcoming predictions
+  if (nextUp.length > 0) {
+    html += '<div class="pred-section-title">📅 即将开赛 · 赛前预测</div>';
+    nextUp.forEach(m => {
+      const pred = predictMatch(m.home, m.away);
+      const confLabel = pred.confidence === 'high' ? '高' : pred.confidence === 'medium' ? '中' : '低';
+      const confColor = pred.confidence === 'high' ? 'var(--fifa-green)' : pred.confidence === 'medium' ? 'var(--fifa-gold)' : 'var(--fifa-text2)';
+      const winnerLabel = pred.winner === 'draw' ? '平局' : pred.winner === 'home' ? m.home_cn + ' 胜' : m.away_cn + ' 胜';
+      const groupTag = groupTagHTML(m.group);
+      html += '<div class="match-card upcoming"><div class="match-top"><div>' + groupTag + '</div><div>' + m.bj_date + ' ' + m.bj_time + '</div><div>' + m.venue + '</div></div>' +
+        '<div class="match-body">' +
+        '<div class="team away"><div class="team-info"><div class="team-name">' + m.away + '</div><div class="team-name-cn">' + m.away_cn + '</div></div></div>' +
+        '<div class="score-center"><div class="vs-text">VS</div></div>' +
+        '<div class="team home"><div class="team-info"><div class="team-name">' + m.home + '</div><div class="team-name-cn">' + m.home_cn + '</div></div></div>' +
+        '</div>' +
+        '<div class="match-goals" style="display:flex;justify-content:space-between;align-items:center">' +
+        '<div>预测比分: <strong>' + pred.predAway + ' - ' + pred.predHome + '</strong> | 预测: <strong>' + winnerLabel + '</strong></div>' +
+        '<div style="font-size:0.7rem;color:' + confColor + '">置信度: ' + confLabel + '</div>' +
+        '</div></div>';
+    });
+  }
+
+  // Past predictions
+  html += '<div class="pred-section-title">📊 已完赛 · 预测 vs 实际</div>';
+  completed.forEach(m => {
+    const pred = predictMatch(m.home, m.away);
+    const actualH = parseInt(m.home_score), actualA = parseInt(m.away_score);
+    const actualWinner = actualH > actualA ? 'home' : actualA > actualH ? 'away' : 'draw';
+    let result, badgeClass;
+    if (pred.winner === actualWinner) { result = '✅ 正确'; badgeClass = 'pred-correct'; }
+    else if (pred.winner === 'draw' || actualWinner === 'draw') { result = '🔶 部分'; badgeClass = 'pred-partial'; }
+    else { result = '❌ 错误'; badgeClass = 'pred-wrong'; }
+    const predLabel = pred.winner === 'draw' ? '平局' : pred.winner === 'home' ? m.home_cn + '胜' : m.away_cn + '胜';
+    const actualLabel = actualWinner === 'draw' ? '平局' : actualWinner === 'home' ? m.home_cn + '胜' : m.away_cn + '胜';
+    const groupTag = groupTagHTML(m.group);
+    html += '<div class="match-card completed"><div class="match-top"><div>' + groupTag + '</div><div>' + m.bj_date + ' ' + m.bj_time + '</div><div>' + m.venue + '</div></div>' +
+      '<div class="match-body">' +
+      '<div class="team away"><div class="team-info"><div class="team-name">' + m.away + '</div><div class="team-name-cn">' + m.away_cn + '</div></div></div>' +
+      '<div class="score-center"><div class="scores">' + m.away_score + ' - ' + m.home_score + '</div><div class="ft-tag">FT</div></div>' +
+      '<div class="team home"><div class="team-info"><div class="team-name">' + m.home + '</div><div class="team-name-cn">' + m.home_cn + '</div></div></div>' +
+      '</div>' +
+      '<div class="match-goals" style="display:flex;justify-content:space-between;align-items:center">' +
+      '<div>预测: ' + predLabel + ' (' + pred.predAway + '-' + pred.predHome + ') | 实际: ' + actualLabel + '</div>' +
+      '<span class="pred-badge ' + badgeClass + '">' + result + '</span>' +
+      '</div></div>';
+  });
+
+  document.getElementById('predictionsList').innerHTML = html;
+}
+
+function renderNews() {
+  fetch('news.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(news => {
+      if (!news.length) {
+        document.getElementById('newsList').innerHTML = '<div class="empty">暂无新闻，每日自动更新</div>';
+        return;
+      }
+      document.getElementById('newsList').innerHTML = news.map(n => {
+        const link = n.url ? '<a href="' + n.url + '" target="_blank" rel="noopener">' + n.title + '</a>' : n.title;
+        return '<div class="news-card"><h3>' + link + '</h3><div class="news-meta">' + n.source + ' · ' + n.date + '</div>' +
+          (n.summary ? '<div class="news-summary">' + n.summary + '</div>' : '') + '</div>';
+      }).join('');
+    })
+    .catch(() => {
+      document.getElementById('newsList').innerHTML = '<div class="empty">暂无新闻</div>';
+    });
+}
+
+setInterval(loadData, 300000);
+loadData();
+</script>
+</body>
+</html>
