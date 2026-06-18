@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17 17:00:47 CST",
+  "last_updated": "2026-06-18 08:15:39 CST",
   "teams": {
     "Algeria": {
       "id": "624",
@@ -1568,20 +1568,35 @@
       "away": "Congo DR",
       "home_cn": "葡萄牙",
       "away_cn": "刚果(金)",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "1",
       "home_id": "482",
       "away_id": "2850",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
       "home_color": "da291c",
       "away_color": "418fde",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "group": "J",
-      "goals": []
+      "goals": [
+        {
+          "player": "J. Neves",
+          "time": "6'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "Y. Wissa",
+          "time": "45'+5'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760437",
@@ -1593,20 +1608,63 @@
       "away": "Croatia",
       "home_cn": "英格兰",
       "away_cn": "克罗地亚",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "4",
+      "away_score": "2",
       "home_id": "448",
       "away_id": "477",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
       "home_color": "ffffff",
       "away_color": "ff0000",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "group": "J",
-      "goals": []
+      "goals": [
+        {
+          "player": "H. Kane",
+          "time": "12'",
+          "own": false,
+          "penalty": true,
+          "side": "home"
+        },
+        {
+          "player": "M. Baturina",
+          "time": "36'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "H. Kane",
+          "time": "42'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "P. Musa",
+          "time": "45'+5'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "J. Bellingham",
+          "time": "47'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "M. Rashford",
+          "time": "85'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760434",
@@ -1626,8 +1684,8 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
       "home_color": "fbd632",
       "away_color": "d21034",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "in",
+      "status": "53'",
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "group": "K",
