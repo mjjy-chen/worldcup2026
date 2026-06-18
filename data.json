@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18 08:15:39 CST",
+  "last_updated": "2026-06-18 11:00:02 CST",
   "teams": {
     "Algeria": {
       "id": "624",
@@ -1676,7 +1676,7 @@
       "away": "Panama",
       "home_cn": "加纳",
       "away_cn": "巴拿马",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "0",
       "home_id": "4469",
       "away_id": "2659",
@@ -1684,12 +1684,20 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
       "home_color": "fbd632",
       "away_color": "d21034",
-      "state": "in",
-      "status": "53'",
+      "state": "post",
+      "status": "FT",
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "group": "K",
-      "goals": []
+      "goals": [
+        {
+          "player": "C. Yirenkyi",
+          "time": "90'+5'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760436",
@@ -1702,19 +1710,27 @@
       "home_cn": "乌兹别克斯坦",
       "away_cn": "哥伦比亚",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "1",
       "home_id": "2570",
       "away_id": "208",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
       "home_color": "ffffff",
       "away_color": "fbd632",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "in",
+      "status": "HT",
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "group": "L",
-      "goals": []
+      "goals": [
+        {
+          "player": "D. Muñoz",
+          "time": "40'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760438",
