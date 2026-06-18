@@ -8,6 +8,21 @@ import json, urllib.request, ssl, sys, re, os, html as html_mod
 from datetime import datetime, timedelta, timezone
 
 BJ_TZ = timezone(timedelta(hours=8))
+
+def _decode_unicode(s):
+    """解码头条搜索返回的双重转义unicode（如 \\u4e16\\u754c -> 世界）"""
+    if not s:
+        return s
+    def _replace(m):
+        try:
+            return chr(int(m.group(1), 16))
+        except:
+            return m.group(0)
+    # 完整的4位hex转义
+    result = re.sub(r'\\u([0-9a-fA-F]{4})', _replace, s)
+    # 截断的不完整转义（如 \u4 后面没跟够4位hex）直接去掉
+    result = re.sub(r'\\u[0-9a-fA-F]{1,3}(?![0-9a-fA-F])', '', result)
+    return result
 OUT_DIR = "/home/mjclaw/hermes/output/worldcup2026"
 
 TEAM_CN = {
@@ -219,27 +234,18 @@ def fetch_news():
             sources = source_pattern.findall(raw)
             
             for i, raw_title in enumerate(titles[:15]):
-                # Decode unicode escapes
-                try:
-                    decoded = raw_title.encode("raw_unicode_escape").decode("utf-8", errors="ignore")
-                    decoded = html_mod.unescape(re.sub(r'<[^>]+>', '', decoded)).strip()
-                except:
-                    decoded = re.sub(r'<[^>]+>', '', raw_title).strip()
+                # Decode unicode escapes - 头条返回双重转义的unicode
+                decoded = _decode_unicode(raw_title)
+                decoded = html_mod.unescape(re.sub(r'<[^>]+>', '', decoded)).strip()
                 if not decoded or len(decoded) < 5:
                     continue
                 abstract = ""
                 if i < len(abstracts):
-                    try:
-                        abstract = abstracts[i].encode("raw_unicode_escape").decode("utf-8", errors="ignore")
-                        abstract = html_mod.unescape(re.sub(r'<[^>]+>', '', abstract)).strip()[:200]
-                    except:
-                        abstract = re.sub(r'<[^>]+>', '', abstracts[i]).strip()[:200]
+                    abstract = _decode_unicode(abstracts[i])
+                    abstract = html_mod.unescape(re.sub(r'<[^>]+>', '', abstract)).strip()[:200]
                 clean_url = f"https://www.toutiao.com/a{article_ids[i]}/" if i < len(article_ids) else ""
                 source_name = sources[i] if i < len(sources) else "头条搜索"
-                try:
-                    source_name = source_name.encode("raw_unicode_escape").decode("utf-8", errors="ignore")
-                except:
-                    pass
+                source_name = _decode_unicode(source_name)
                 news.append({
                     "title": decoded, "summary": abstract,
                     "url": clean_url, "source": source_name,
