@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18 11:00:02 CST",
+  "last_updated": "2026-06-19 11:39:11 CST",
   "teams": {
     "Algeria": {
       "id": "624",
@@ -1709,16 +1709,16 @@
       "away": "Colombia",
       "home_cn": "乌兹别克斯坦",
       "away_cn": "哥伦比亚",
-      "home_score": "0",
-      "away_score": "1",
+      "home_score": "1",
+      "away_score": "3",
       "home_id": "2570",
       "away_id": "208",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
       "home_color": "ffffff",
       "away_color": "fbd632",
-      "state": "in",
-      "status": "HT",
+      "state": "post",
+      "status": "FT",
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "group": "L",
@@ -1726,6 +1726,27 @@
         {
           "player": "D. Muñoz",
           "time": "40'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "A. Fayzullaev",
+          "time": "60'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "L. Díaz",
+          "time": "65'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "J. Campaz",
+          "time": "90'+9'",
           "own": false,
           "penalty": false,
           "side": "away"
@@ -1742,20 +1763,35 @@
       "away": "South Africa",
       "home_cn": "捷克",
       "away_cn": "南非",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "1",
       "home_id": "450",
       "away_id": "467",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
       "home_color": "d7141a",
       "away_color": "FFB81C",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "group": "A",
-      "goals": []
+      "goals": [
+        {
+          "player": "M. Sadílek",
+          "time": "6'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "T. Mokoena",
+          "time": "83'",
+          "own": false,
+          "penalty": true,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760439",
@@ -1767,20 +1803,56 @@
       "away": "Bosnia-Herz",
       "home_cn": "瑞士",
       "away_cn": "波黑",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "4",
+      "away_score": "1",
       "home_id": "475",
       "away_id": "452",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
       "home_color": "FF0000",
       "away_color": "112855",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "group": "B",
-      "goals": []
+      "goals": [
+        {
+          "player": "J. Manzambi",
+          "time": "74'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "R. Vargas",
+          "time": "84'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. Manzambi",
+          "time": "90'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "E. Mahmic",
+          "time": "90'+3'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "G. Xhaka",
+          "time": "90'+7'",
+          "own": false,
+          "penalty": true,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760440",
@@ -1792,7 +1864,7 @@
       "away": "Qatar",
       "home_cn": "加拿大",
       "away_cn": "卡塔尔",
-      "home_score": "0",
+      "home_score": "6",
       "away_score": "0",
       "home_id": "206",
       "away_id": "4398",
@@ -1800,12 +1872,55 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
       "home_color": "ed2224",
       "away_color": "691a40",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "group": "B",
-      "goals": []
+      "goals": [
+        {
+          "player": "C. Larin",
+          "time": "16'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. David",
+          "time": "29'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. David",
+          "time": "45'+3'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "N. Saliba",
+          "time": "64'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "M. Manai",
+          "time": "75'",
+          "own": true,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. David",
+          "time": "90'+2'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760441",
@@ -1817,7 +1932,7 @@
       "away": "South Korea",
       "home_cn": "墨西哥",
       "away_cn": "韩国",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "0",
       "home_id": "203",
       "away_id": "451",
@@ -1825,12 +1940,20 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
       "home_color": "006847",
       "away_color": "ce2028",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
       "group": "A",
-      "goals": []
+      "goals": [
+        {
+          "player": "L. Romo",
+          "time": "50'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760442",
