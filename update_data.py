@@ -206,9 +206,9 @@ def fetch_news():
                         abstract = item.get("abstract", "")
                         url_link = item.get("url", item.get("source_url", ""))
                         source_name = item.get("source", item.get("media_name", "头条"))
-                        if title and ("世界杯" in title or "World Cup" in title):
-                            title = html_mod.unescape(re.sub(r'<[^>]+>', '', title)).strip()
-                            abstract = html_mod.unescape(re.sub(r'<[^>]+>', '', abstract)).strip() if abstract else ""
+                        if title and ("世界杯" in _decode_unicode(title) or "World Cup" in title):
+                            title = html_mod.unescape(re.sub(r'<[^>]+>', '', _decode_unicode(title))).strip()
+                            abstract = html_mod.unescape(re.sub(r'<[^>]+>', '', _decode_unicode(abstract))).strip() if abstract else ""
                             # Build clean toutiao URL from article ID
                             article_match = re.search(r'/a(\d+)', url_link) if url_link else None
                             clean_url = f"https://www.toutiao.com/a{article_match.group(1)}/" if article_match else url_link
