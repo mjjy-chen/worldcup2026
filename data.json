@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-24 16:23:37 CST",
+  "last_updated": "2026-06-27 15:20:31 CST",
   "teams": {
     "Algeria": {
       "id": "624",
@@ -248,7 +248,7 @@
       "name": "Iraq",
       "short": "Iraq",
       "abbreviation": "IRQ",
-      "color": "0A4D2E",
+      "color": "FFFFFF",
       "altColor": "ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
       "cn": "伊拉克",
@@ -413,7 +413,7 @@
       "name": "Senegal",
       "short": "Senegal",
       "abbreviation": "SEN",
-      "color": "006436",
+      "color": "FFFFFF",
       "altColor": "ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
       "cn": "塞内加尔",
@@ -1359,7 +1359,7 @@
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
       "home_color": "000080",
-      "away_color": "006436",
+      "away_color": "FFFFFF",
       "state": "post",
       "status": "FT",
       "venue": "MetLife Stadium",
@@ -1412,7 +1412,7 @@
       "away_id": "464",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
-      "home_color": "0A4D2E",
+      "home_color": "FFFFFF",
       "away_color": "C8102E",
       "state": "post",
       "status": "FT",
@@ -2546,7 +2546,7 @@
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
       "home_color": "000080",
-      "away_color": "0A4D2E",
+      "away_color": "FFFFFF",
       "state": "post",
       "status": "FT",
       "venue": "Lincoln Financial Field",
@@ -2593,7 +2593,7 @@
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
       "home_color": "C8102E",
-      "away_color": "006436",
+      "away_color": "FFFFFF",
       "state": "post",
       "status": "FT",
       "venue": "MetLife Stadium",
@@ -2846,20 +2846,49 @@
       "away": "Qatar",
       "home_cn": "波黑",
       "away_cn": "卡塔尔",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "3",
+      "away_score": "1",
       "home_id": "452",
       "away_id": "4398",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
       "home_color": "112855",
       "away_color": "691a40",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "group": "B",
-      "goals": []
+      "goals": [
+        {
+          "player": "K. Alajbegovic",
+          "time": "29'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "M. Abunada",
+          "time": "34'",
+          "own": true,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "H. Al-Haydos",
+          "time": "42'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "E. Mahmic",
+          "time": "80'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760463",
@@ -2871,20 +2900,42 @@
       "away": "Canada",
       "home_cn": "瑞士",
       "away_cn": "加拿大",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "2",
+      "away_score": "1",
       "home_id": "475",
       "away_id": "206",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
       "home_color": "FF0000",
       "away_color": "ed2224",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "group": "B",
-      "goals": []
+      "goals": [
+        {
+          "player": "R. Vargas",
+          "time": "46'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. Manzambi",
+          "time": "57'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "P. David",
+          "time": "76'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760464",
@@ -2896,20 +2947,63 @@
       "away": "Haiti",
       "home_cn": "摩洛哥",
       "away_cn": "海地",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "4",
+      "away_score": "2",
       "home_id": "2869",
       "away_id": "2654",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
       "home_color": "df2027",
       "away_color": "0033a0",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "group": "C/D",
-      "goals": []
+      "goals": [
+        {
+          "player": "Y. Bounou",
+          "time": "10'",
+          "own": true,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "A. Hakimi",
+          "time": "39'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "W. Isidor",
+          "time": "43'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "I. Saibari",
+          "time": "45'+1'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "S. Rahimi",
+          "time": "78'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "G. Yassine",
+          "time": "89'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760465",
@@ -2922,19 +3016,41 @@
       "home_cn": "苏格兰",
       "away_cn": "巴西",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "3",
       "home_id": "580",
       "away_id": "205",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
       "home_color": "1a2d69",
       "away_color": "fee000",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "group": "D",
-      "goals": []
+      "goals": [
+        {
+          "player": "Vinícius Júnior",
+          "time": "7'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "Vinícius Júnior",
+          "time": "45'+3'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "M. Cunha",
+          "time": "60'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760467",
@@ -2947,19 +3063,41 @@
       "home_cn": "捷克",
       "away_cn": "墨西哥",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "3",
       "home_id": "450",
       "away_id": "203",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
       "home_color": "d7141a",
       "away_color": "006847",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "group": "A",
-      "goals": []
+      "goals": [
+        {
+          "player": "M. Chávez",
+          "time": "55'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "J. Quiñones",
+          "time": "61'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "Á. Fidalgo",
+          "time": "90'+4'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760466",
@@ -2971,7 +3109,7 @@
       "away": "South Korea",
       "home_cn": "南非",
       "away_cn": "韩国",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "0",
       "home_id": "467",
       "away_id": "451",
@@ -2979,12 +3117,20 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
       "home_color": "FFB81C",
       "away_color": "ce2028",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Estadio BBVA",
       "venue_city": "Guadalupe",
       "group": "A",
-      "goals": []
+      "goals": [
+        {
+          "player": "T. Maseko",
+          "time": "63'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760473",
@@ -2997,19 +3143,34 @@
       "home_cn": "库拉索",
       "away_cn": "科特迪瓦",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "2",
       "home_id": "11678",
       "away_id": "4789",
       "home_logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
       "home_color": "0537e4",
       "away_color": "FF8200",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "group": "E",
-      "goals": []
+      "goals": [
+        {
+          "player": "N. Pépé",
+          "time": "7'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "N. Pépé",
+          "time": "64'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760468",
@@ -3021,20 +3182,42 @@
       "away": "Germany",
       "home_cn": "厄瓜多尔",
       "away_cn": "德国",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "2",
+      "away_score": "1",
       "home_id": "209",
       "away_id": "481",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "home_color": "ffdd00",
       "away_color": "FFFFFF",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "group": "E",
-      "goals": []
+      "goals": [
+        {
+          "player": "L. Sané",
+          "time": "2'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "N. Angulo",
+          "time": "9'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "G. Plata",
+          "time": "77'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760471",
@@ -3046,20 +3229,35 @@
       "away": "Sweden",
       "home_cn": "日本",
       "away_cn": "瑞典",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "1",
       "home_id": "627",
       "away_id": "466",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
       "home_color": "000555",
       "away_color": "fecb00",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "group": "F",
-      "goals": []
+      "goals": [
+        {
+          "player": "D. Maeda",
+          "time": "56'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "A. Elanga",
+          "time": "62'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760472",
@@ -3071,20 +3269,49 @@
       "away": "Netherlands",
       "home_cn": "突尼斯",
       "away_cn": "荷兰",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "3",
       "home_id": "659",
       "away_id": "449",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "home_color": "D20300",
       "away_color": "fb5d00",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "group": "F",
-      "goals": []
+      "goals": [
+        {
+          "player": "E. Skhiri",
+          "time": "3'",
+          "own": true,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "B. Brobbey",
+          "time": "7'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "H. Mastouri",
+          "time": "54'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "J. van Hecke",
+          "time": "62'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760469",
@@ -3104,8 +3331,8 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "home_color": "ea2300",
       "away_color": "FFCD00",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
       "group": "D/C",
@@ -3121,20 +3348,56 @@
       "away": "USA",
       "home_cn": "土耳其",
       "away_cn": "美国",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "3",
+      "away_score": "2",
       "home_id": "465",
       "away_id": "660",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
       "home_color": "ffffff",
       "away_color": "d42339",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "group": "C",
-      "goals": []
+      "goals": [
+        {
+          "player": "A. Trusty",
+          "time": "3'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "A. Güler",
+          "time": "10'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "B. Yilmaz",
+          "time": "31'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "S. Berhalter",
+          "time": "49'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "K. Ayhan",
+          "time": "90'+8'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760475",
@@ -3146,20 +3409,56 @@
       "away": "France",
       "home_cn": "挪威",
       "away_cn": "法国",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "4",
       "home_id": "464",
       "away_id": "478",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "home_color": "C8102E",
       "away_color": "000080",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "group": "I",
-      "goals": []
+      "goals": [
+        {
+          "player": "O. Dembélé",
+          "time": "7'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "O. Dembélé",
+          "time": "20'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "T. Aasgaard",
+          "time": "21'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "O. Dembélé",
+          "time": "32'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "D. Doué",
+          "time": "90'+4'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760474",
@@ -3171,20 +3470,56 @@
       "away": "Iraq",
       "home_cn": "塞内加尔",
       "away_cn": "伊拉克",
-      "home_score": "0",
+      "home_score": "5",
       "away_score": "0",
       "home_id": "654",
       "away_id": "4375",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
-      "home_color": "006436",
-      "away_color": "0A4D2E",
-      "state": "pre",
-      "status": "Scheduled",
+      "home_color": "FFFFFF",
+      "away_color": "FFFFFF",
+      "state": "post",
+      "status": "FT",
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "group": "I",
-      "goals": []
+      "goals": [
+        {
+          "player": "H. Diarra",
+          "time": "4'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "I. Sarr",
+          "time": "56'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "P. Gueye",
+          "time": "59'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "P. Gueye",
+          "time": "71'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "I. Ndiaye",
+          "time": "82'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        }
+      ]
     },
     {
       "id": "760478",
@@ -3204,8 +3539,8 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
       "home_color": "000080",
       "away_color": "FFFFFF",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "group": "H/G",
@@ -3222,19 +3557,27 @@
       "home_cn": "乌拉圭",
       "away_cn": "西班牙",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "1",
       "home_id": "212",
       "away_id": "164",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
       "home_color": "55B5E5",
       "away_color": "c60b1e",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
       "group": "G/H",
-      "goals": []
+      "goals": [
+        {
+          "player": "Á. Baena",
+          "time": "42'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760476",
@@ -3246,20 +3589,35 @@
       "away": "Iran",
       "home_cn": "埃及",
       "away_cn": "伊朗",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "1",
       "home_id": "2620",
       "away_id": "469",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/irn.png",
       "home_color": "D20300",
       "away_color": "FFFFFF",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "group": "L/G",
-      "goals": []
+      "goals": [
+        {
+          "player": "M. Saber",
+          "time": "5'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "R. Rezaeian",
+          "time": "14'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760477",
@@ -3271,20 +3629,63 @@
       "away": "Belgium",
       "home_cn": "新西兰",
       "away_cn": "比利时",
-      "home_score": "0",
-      "away_score": "0",
+      "home_score": "1",
+      "away_score": "5",
       "home_id": "2666",
       "away_id": "459",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
       "home_color": "000000",
       "away_color": "E30613",
-      "state": "pre",
-      "status": "Scheduled",
+      "state": "post",
+      "status": "FT",
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "group": "G/L",
-      "goals": []
+      "goals": [
+        {
+          "player": "L. Trossard",
+          "time": "28'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "L. Trossard",
+          "time": "50'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "K. De Bruyne",
+          "time": "66'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "E. Just",
+          "time": "84'",
+          "own": false,
+          "penalty": false,
+          "side": "home"
+        },
+        {
+          "player": "R. Lukaku",
+          "time": "86'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        },
+        {
+          "player": "A. Saelemaekers",
+          "time": "90'+4'",
+          "own": false,
+          "penalty": false,
+          "side": "away"
+        }
+      ]
     },
     {
       "id": "760480",
@@ -3442,23 +3843,23 @@
       "date_bj": "2026-06-29 03:00",
       "bj_date": "06/29",
       "bj_time": "03:00",
-      "home": "2A",
-      "away": "2B",
-      "home_cn": "2A",
-      "away_cn": "2B",
+      "home": "South Africa",
+      "away": "Canada",
+      "home_cn": "南非",
+      "away_cn": "加拿大",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5926",
-      "away_id": "5924",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "467",
+      "away_id": "206",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+      "home_color": "FFB81C",
+      "away_color": "ed2224",
       "state": "pre",
       "status": "Scheduled",
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
-      "group": "淘汰赛",
+      "group": "B/A",
       "goals": []
     },
     {
@@ -3467,23 +3868,23 @@
       "date_bj": "2026-06-30 01:00",
       "bj_date": "06/30",
       "bj_time": "01:00",
-      "home": "1C",
-      "away": "2F",
-      "home_cn": "1C",
-      "away_cn": "2F",
+      "home": "Brazil",
+      "away": "Japan",
+      "home_cn": "巴西",
+      "away_cn": "日本",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5927",
-      "away_id": "5934",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "205",
+      "away_id": "627",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+      "home_color": "fee000",
+      "away_color": "000555",
       "state": "pre",
       "status": "Scheduled",
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
-      "group": "淘汰赛",
+      "group": "F/D",
       "goals": []
     },
     {
@@ -3493,22 +3894,22 @@
       "bj_date": "06/30",
       "bj_time": "04:30",
       "home": "Germany",
-      "away": "3RD A/B/C/D/F",
+      "away": "Paraguay",
       "home_cn": "德国",
-      "away_cn": "3RD A/B/C/D/F",
+      "away_cn": "巴拉圭",
       "home_score": "0",
       "away_score": "0",
       "home_id": "481",
-      "away_id": "131541",
+      "away_id": "210",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-      "away_logo": "",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
       "home_color": "FFFFFF",
-      "away_color": "333333",
+      "away_color": "ea2300",
       "state": "pre",
       "status": "Scheduled",
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
-      "group": "E",
+      "group": "C/E",
       "goals": []
     },
     {
@@ -3517,23 +3918,23 @@
       "date_bj": "2026-06-30 09:00",
       "bj_date": "06/30",
       "bj_time": "09:00",
-      "home": "1F",
-      "away": "2C",
-      "home_cn": "1F",
-      "away_cn": "2C",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "home_cn": "荷兰",
+      "away_cn": "摩洛哥",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5933",
-      "away_id": "5930",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "449",
+      "away_id": "2869",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+      "home_color": "fb5d00",
+      "away_color": "df2027",
       "state": "pre",
       "status": "Scheduled",
       "venue": "Estadio BBVA",
       "venue_city": "Guadalupe",
-      "group": "淘汰赛",
+      "group": "D/F",
       "goals": []
     },
     {
@@ -3542,23 +3943,23 @@
       "date_bj": "2026-07-01 01:00",
       "bj_date": "07/01",
       "bj_time": "01:00",
-      "home": "2E",
-      "away": "2I",
-      "home_cn": "2E",
-      "away_cn": "2I",
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "home_cn": "科特迪瓦",
+      "away_cn": "挪威",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5932",
-      "away_id": "131501",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "4789",
+      "away_id": "464",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+      "home_color": "FF8200",
+      "away_color": "C8102E",
       "state": "pre",
       "status": "Scheduled",
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
-      "group": "淘汰赛",
+      "group": "I/E",
       "goals": []
     },
     {
@@ -3567,23 +3968,23 @@
       "date_bj": "2026-07-01 05:00",
       "bj_date": "07/01",
       "bj_time": "05:00",
-      "home": "1I",
-      "away": "3RD C/D/F/G/H",
-      "home_cn": "1I",
-      "away_cn": "3RD C/D/F/G/H",
+      "home": "France",
+      "away": "Sweden",
+      "home_cn": "法国",
+      "away_cn": "瑞典",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "131505",
-      "away_id": "131544",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "478",
+      "away_id": "466",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+      "home_color": "000080",
+      "away_color": "fecb00",
       "state": "pre",
       "status": "Scheduled",
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
-      "group": "淘汰赛",
+      "group": "F/I",
       "goals": []
     },
     {
@@ -3642,23 +4043,23 @@
       "date_bj": "2026-07-02 04:00",
       "bj_date": "07/02",
       "bj_time": "04:00",
-      "home": "1G",
+      "home": "Belgium",
       "away": "3RD A/E/H/I/J",
-      "home_cn": "1G",
+      "home_cn": "比利时",
       "away_cn": "3RD A/E/H/I/J",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5935",
+      "home_id": "459",
       "away_id": "131542",
-      "home_logo": "",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
       "away_logo": "",
-      "home_color": "333333",
+      "home_color": "E30613",
       "away_color": "333333",
       "state": "pre",
       "status": "Scheduled",
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
-      "group": "淘汰赛",
+      "group": "G",
       "goals": []
     },
     {
@@ -3668,22 +4069,22 @@
       "bj_date": "07/02",
       "bj_time": "08:00",
       "home": "USA",
-      "away": "3RD B/E/F/I/J",
+      "away": "Bosnia-Herz",
       "home_cn": "美国",
-      "away_cn": "3RD B/E/F/I/J",
+      "away_cn": "波黑",
       "home_score": "0",
       "away_score": "0",
       "home_id": "660",
-      "away_id": "131543",
+      "away_id": "452",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-      "away_logo": "",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
       "home_color": "d42339",
-      "away_color": "333333",
+      "away_color": "112855",
       "state": "pre",
       "status": "Scheduled",
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
-      "group": "C",
+      "group": "B/C",
       "goals": []
     },
     {
@@ -3692,23 +4093,23 @@
       "date_bj": "2026-07-03 03:00",
       "bj_date": "07/03",
       "bj_time": "03:00",
-      "home": "1H",
+      "home": "Spain",
       "away": "2J",
-      "home_cn": "1H",
+      "home_cn": "西班牙",
       "away_cn": "2J",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5937",
+      "home_id": "164",
       "away_id": "131502",
-      "home_logo": "",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
       "away_logo": "",
-      "home_color": "333333",
+      "home_color": "c60b1e",
       "away_color": "333333",
       "state": "pre",
       "status": "Scheduled",
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
-      "group": "淘汰赛",
+      "group": "G",
       "goals": []
     },
     {
@@ -3742,23 +4143,23 @@
       "date_bj": "2026-07-03 11:00",
       "bj_date": "07/03",
       "bj_time": "11:00",
-      "home": "1B",
+      "home": "Switzerland",
       "away": "3RD E/F/G/I/J",
-      "home_cn": "1B",
+      "home_cn": "瑞士",
       "away_cn": "3RD E/F/G/I/J",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5925",
+      "home_id": "475",
       "away_id": "131547",
-      "home_logo": "",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
       "away_logo": "",
-      "home_color": "333333",
+      "home_color": "FF0000",
       "away_color": "333333",
       "state": "pre",
       "status": "Scheduled",
       "venue": "BC Place",
       "venue_city": "Vancouver",
-      "group": "淘汰赛",
+      "group": "B",
       "goals": []
     },
     {
@@ -3767,23 +4168,23 @@
       "date_bj": "2026-07-04 02:00",
       "bj_date": "07/04",
       "bj_time": "02:00",
-      "home": "2D",
-      "away": "2G",
-      "home_cn": "2D",
-      "away_cn": "2G",
+      "home": "Australia",
+      "away": "Egypt",
+      "home_cn": "澳大利亚",
+      "away_cn": "埃及",
       "home_score": "0",
       "away_score": "0",
-      "home_id": "5928",
-      "away_id": "5936",
-      "home_logo": "",
-      "away_logo": "",
-      "home_color": "333333",
-      "away_color": "333333",
+      "home_id": "628",
+      "away_id": "2620",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+      "home_color": "FFCD00",
+      "away_color": "D20300",
       "state": "pre",
       "status": "Scheduled",
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
-      "group": "淘汰赛",
+      "group": "G/D",
       "goals": []
     },
     {
@@ -3793,22 +4194,22 @@
       "bj_date": "07/04",
       "bj_time": "06:00",
       "home": "Argentina",
-      "away": "2H",
+      "away": "Cape Verde",
       "home_cn": "阿根廷",
-      "away_cn": "2H",
+      "away_cn": "佛得角",
       "home_score": "0",
       "away_score": "0",
       "home_id": "202",
-      "away_id": "5938",
+      "away_id": "2597",
       "home_logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-      "away_logo": "",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
       "home_color": "74acdf",
-      "away_color": "333333",
+      "away_color": "000080",
       "state": "pre",
       "status": "Scheduled",
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
-      "group": "H",
+      "group": "G/H",
       "goals": []
     },
     {
